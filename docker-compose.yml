@@ -1,0 +1,14 @@
+version: 3.8.0
+services:
+  container:
+    stdin_open: true
+    tty: true
+    image: tipodecambio
+    container_name: tipodecambio
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ./app/:/app/
+    ports:
+      - "3000:3000"
